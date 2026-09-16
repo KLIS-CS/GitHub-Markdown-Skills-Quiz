@@ -13,6 +13,7 @@ permissions:
 
 jobs:
   grade:
+    if: ${{ github.repository != 'KLIS-CS/GitHub-Markdown-Skills-Quiz' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
