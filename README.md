@@ -20,13 +20,14 @@ Copy this quiz into your own GitHub account:
 
 After the copy is created:
 
-1. Open **Actions**.
-2. Select **Start Markdown Skills Quiz**.
-3. Choose **Run workflow**.
-4. Read the quiz instructions in the Issue created by the workflow.
-5. Open `markdown-quiz.md` and complete only the answer area.
-6. Commit your changes to `main`.
-7. Open the Actions run or the Progress Issue to see your automatic score.
+1. Open `markdown-quiz.md`.
+2. Click the **pencil (Edit)** button.
+3. Complete only the answer area between `QUIZ-START` and `QUIZ-END`.
+4. Click **Commit changes** and commit directly to `main`.
+5. Wait for the automatic grader to finish, then open **Issues**.
+6. Open **Markdown Skills Quiz — Progress** to see your score and feedback.
+
+> **Do not go to Actions and do not run a workflow manually.** Your commit to `markdown-quiz.md` automatically starts grading.
 
 > This quiz intentionally does **not** require a feature branch or Pull Request. Those skills are assessed later in CP2. The goal here is to measure Markdown only.
 
@@ -46,6 +47,8 @@ After the copy is created:
 | **Total** | **100** |
 
 The grader checks the Markdown source between the quiz markers in `markdown-quiz.md`. Instructions outside that answer area do not count.
+
+If your score is below 100, fix the missing Markdown evidence in `markdown-quiz.md` and commit again. The same Progress Issue will update automatically.
 
 ## Mastery path
 
