@@ -42,6 +42,7 @@ jobs:
             # Markdown Skills Quiz — Progress
 
             **Student:** @${context.actor}  
+            **Repository:** https://github.com/${owner}/${repo}  
             **Score:** **${result.score}/100**
 
             | Skill | Score | Feedback |
