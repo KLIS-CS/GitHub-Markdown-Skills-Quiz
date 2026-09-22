@@ -32,16 +32,24 @@ jobs:
           test -f markdown-quiz.md
           test -f .github/scripts/grade-markdown.js
           test -f .github/workflows/grade.yml
+          test -f .github/workflows/grade-external-submission.yml
+          test -f .github/ISSUE_TEMPLATE/markdown-quiz-submission.yml
           test -f tests/grade-markdown.test.js
           grep -q 'QUIZ-START' markdown-quiz.md
           grep -q 'QUIZ-END' markdown-quiz.md
           grep -q '100 points automatic' README.md
           grep -q '15 minutes' README.md
           grep -q 'Do not go to Actions' README.md
+          grep -q 'visibility=public' README.md
+          grep -q 'Submit Quiz' README.md
+          grep -q 'markdown-quiz-submission.yml' .github/workflows/grade.yml
+          grep -q 'klis-markdown-mother-score' .github/workflows/grade-external-submission.yml
+          grep -q 'gradeMarkdown' .github/workflows/grade-external-submission.yml
+          grep -q '.markdown-quiz-grades/' .github/workflows/grade-external-submission.yml
 
       - name: Run grader fixture tests
         run: node tests/grade-markdown.test.js
 
       - name: Validate workflow YAML syntax
         run: |
-          ruby -e "require 'yaml'; YAML.load_file('.github/workflows/grade.yml'); YAML.load_file('.github/workflows/template-self-test.yml'); puts 'Workflow YAML parsed successfully.'"
+          ruby -e "require 'yaml'; Dir['.github/workflows/*.yml'].each { |f| YAML.load_file(f); puts \"OK #{f}\" }; YAML.load_file('.github/ISSUE_TEMPLATE/markdown-quiz-submission.yml'); puts 'Workflow YAML parsed successfully.'"
