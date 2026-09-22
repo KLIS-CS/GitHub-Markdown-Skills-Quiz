@@ -51,7 +51,13 @@ jobs:
 
             ${status}
 
-            Only content between \`QUIZ-START\` and \`QUIZ-END\` is graded. Commit a correction to \`markdown-quiz.md\` to re-grade automatically.`;
+            Only content between \`QUIZ-START\` and \`QUIZ-END\` is graded. Commit a correction to \`markdown-quiz.md\` to re-grade automatically.
+
+            ## Submit to KLIS-CS
+
+            [Submit Quiz to the mother repository](https://github.com/KLIS-CS/GitHub-Markdown-Skills-Quiz/issues/new?template=markdown-quiz-submission.yml)
+
+            The mother repository independently re-grades your public repository; you do not enter your score manually.`;
 
             const issues = await github.paginate(github.rest.issues.listForRepo, {
               owner, repo, state: 'all', per_page: 100
