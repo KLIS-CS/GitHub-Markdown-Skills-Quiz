@@ -18,7 +18,30 @@ Complete every task in the answer area below. Do not delete the `QUIZ-START` or 
 ---
 
 <!-- QUIZ-START -->
+# My Markdown Skills
+**hi**, I am *nice* to meet you!
+- hello
+- hi
+- bye
+1. pencil
+2. pen
+3. ruler
 
-Replace this line with your Markdown answers.
+! https://git-scm.com/install/
+
+`git status`
+
+`git add .` and `git commit -m "markdown quiz"`
+
+- [x] say hello
+
+- [ ] tast
+
+> This is the sentence.
+
+|question 1|question 2|
+|----------|----------|
+|finish    |finish    |
+|done      |done      |
 
 <!-- QUIZ-END -->
